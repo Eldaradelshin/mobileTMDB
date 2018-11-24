@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C28043BF77237401DCCFAF4 /* Pods_mobileTMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629DDF82052F1E9256E628AA /* Pods_mobileTMDB.framework */; };
 		627040A121A7328E003CAE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040A021A7328E003CAE0A /* AppDelegate.swift */; };
 		627040A321A7328E003CAE0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040A221A7328E003CAE0A /* ViewController.swift */; };
 		627040A621A7328E003CAE0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627040A421A7328E003CAE0A /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 		627040C421A9A94D003CAE0A /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		627040C721A9B6D7003CAE0A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		627040CA21A9DEB1003CAE0A /* FilmDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsVC.swift; sourceTree = "<group>"; };
+		629DDF82052F1E9256E628AA /* Pods_mobileTMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mobileTMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D960539DF521B6D50097C405 /* Pods-mobileTMDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobileTMDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB.release.xcconfig"; sourceTree = "<group>"; };
+		EF62B547B6AFDDB472C95761 /* Pods-mobileTMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mobileTMDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C28043BF77237401DCCFAF4 /* Pods_mobileTMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				6270409F21A7328E003CAE0A /* mobileTMDB */,
 				6270409E21A7328E003CAE0A /* Products */,
+				BA3B37B1EFAC9C4C28EE0580 /* Pods */,
+				82A785E9D9F8073CB420D8C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = FilmDetails;
 			sourceTree = "<group>";
 		};
+		82A785E9D9F8073CB420D8C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				629DDF82052F1E9256E628AA /* Pods_mobileTMDB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA3B37B1EFAC9C4C28EE0580 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF62B547B6AFDDB472C95761 /* Pods-mobileTMDB.debug.xcconfig */,
+				D960539DF521B6D50097C405 /* Pods-mobileTMDB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 627040AF21A7329D003CAE0A /* Build configuration list for PBXNativeTarget "mobileTMDB" */;
 			buildPhases = (
+				E3F909FF8C4E0C4CD77FCE75 /* [CP] Check Pods Manifest.lock */,
 				6270409921A7328E003CAE0A /* Sources */,
 				6270409A21A7328E003CAE0A /* Frameworks */,
 				6270409B21A7328E003CAE0A /* Resources */,
+				FDD22BD2CFCD4E7E4853CFC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +216,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E3F909FF8C4E0C4CD77FCE75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mobileTMDB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD22BD2CFCD4E7E4853CFC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6270409921A7328E003CAE0A /* Sources */ = {
@@ -348,6 +415,7 @@
 		};
 		627040B021A7329D003CAE0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF62B547B6AFDDB472C95761 /* Pods-mobileTMDB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +433,7 @@
 		};
 		627040B121A7329D003CAE0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D960539DF521B6D50097C405 /* Pods-mobileTMDB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
