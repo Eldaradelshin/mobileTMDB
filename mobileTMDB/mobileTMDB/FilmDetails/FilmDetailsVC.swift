@@ -10,7 +10,6 @@ import UIKit
 
 class FilmDetailsVC: UIViewController {
     
-    
     var selectedDetailedFilm = [Film]()
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,6 +17,10 @@ class FilmDetailsVC: UIViewController {
     @IBOutlet weak var releaseDate: UILabel!
     @IBOutlet weak var filmRate: UILabel!
     @IBOutlet weak var filmOverview: UITextView!
+    
+    @IBAction func saveAction(_ sender: Any) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

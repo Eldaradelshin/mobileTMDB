@@ -75,6 +75,7 @@
 		6270409F21A7328E003CAE0A /* mobileTMDB */ = {
 			isa = PBXGroup;
 			children = (
+				627040CD21AA0AE1003CAE0A /* Saving */,
 				627040C921A9DE6E003CAE0A /* FilmDetails */,
 				627040C621A9B698003CAE0A /* Model */,
 				627040C321A9A926003CAE0A /* Networking */,
@@ -132,6 +133,13 @@
 			path = FilmDetails;
 			sourceTree = "<group>";
 		};
+		627040CD21AA0AE1003CAE0A /* Saving */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Saving;
+			sourceTree = "<group>";
+		};
 		82A785E9D9F8073CB420D8C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +168,6 @@
 				6270409921A7328E003CAE0A /* Sources */,
 				6270409A21A7328E003CAE0A /* Frameworks */,
 				6270409B21A7328E003CAE0A /* Resources */,
-				FDD22BD2CFCD4E7E4853CFC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,26 +241,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDD22BD2CFCD4E7E4853CFC1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mobileTMDB/Pods-mobileTMDB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

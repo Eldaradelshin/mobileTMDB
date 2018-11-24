@@ -26,22 +26,21 @@ class RequestService {
         
         myUrl?.queryItems = items
         let request = URLRequest(url: (myUrl?.url)!)
-        dataTask = session.dataTask(with: request, completionHandler: {data, response, error in
+        dataTask = session.dataTask(with: request, completionHandler: { data, response, error in
             if error == nil {
                 let recievedData = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String: Any]
                 let innerArray = recievedData!["results"] as! [[String: Any]]
                 var films = [Film]()
-                
                 for filmDict in innerArray {
-                    let film = Film(json: filmDict)
+                    if let film = Film(json: filmDict) {
                     films.append(film)
                 }
-                
              completion(films)
             }
+        }
         })
         dataTask?.resume()
-    }
+}
     
     func requestFilmForQuery(query:String, completion: @escaping ([Film]) -> Void) {
         let session = URLSession(configuration: .default)
@@ -68,8 +67,9 @@ class RequestService {
                 
                 if innerArray.isEmpty != true {
                 for filmDict in innerArray {
-                    let film = Film(json: filmDict)
+                    if let film = Film(json: filmDict) {
                     films.append(film)
+                    }
                 }
             }
                 completion(films)
