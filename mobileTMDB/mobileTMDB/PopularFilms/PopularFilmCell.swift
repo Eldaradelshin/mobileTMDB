@@ -9,7 +9,7 @@
 import UIKit
 
 class PopularFilmCell: UITableViewCell {
-
+    var filmId: Int = 0
     @IBOutlet weak var posterView: UIImageView!
     
     @IBOutlet weak var title: UILabel!

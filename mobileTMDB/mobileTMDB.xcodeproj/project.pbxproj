@@ -18,6 +18,7 @@
 		627040C221A9A655003CAE0A /* FavFilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040C121A9A655003CAE0A /* FavFilmCell.swift */; };
 		627040C521A9A94D003CAE0A /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040C421A9A94D003CAE0A /* RequestService.swift */; };
 		627040C821A9B6D7003CAE0A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040C721A9B6D7003CAE0A /* Film.swift */; };
+		627040CB21A9DEB1003CAE0A /* FilmDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627040CA21A9DEB1003CAE0A /* FilmDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		627040C121A9A655003CAE0A /* FavFilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavFilmCell.swift; sourceTree = "<group>"; };
 		627040C421A9A94D003CAE0A /* RequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		627040C721A9B6D7003CAE0A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		627040CA21A9DEB1003CAE0A /* FilmDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		6270409F21A7328E003CAE0A /* mobileTMDB */ = {
 			isa = PBXGroup;
 			children = (
+				627040C921A9DE6E003CAE0A /* FilmDetails */,
 				627040C621A9B698003CAE0A /* Model */,
 				627040C321A9A926003CAE0A /* Networking */,
 				627040BA21A9A4F1003CAE0A /* FavFilms */,
@@ -112,6 +115,14 @@
 				627040C721A9B6D7003CAE0A /* Film.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		627040C921A9DE6E003CAE0A /* FilmDetails */ = {
+			isa = PBXGroup;
+			children = (
+				627040CA21A9DEB1003CAE0A /* FilmDetailsVC.swift */,
+			);
+			path = FilmDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			files = (
 				627040C521A9A94D003CAE0A /* RequestService.swift in Sources */,
 				627040C021A9A61F003CAE0A /* PopularFilmCell.swift in Sources */,
+				627040CB21A9DEB1003CAE0A /* FilmDetailsVC.swift in Sources */,
 				627040BC21A9A52B003CAE0A /* PopularFilmsTable.swift in Sources */,
 				627040A321A7328E003CAE0A /* ViewController.swift in Sources */,
 				627040C221A9A655003CAE0A /* FavFilmCell.swift in Sources */,
