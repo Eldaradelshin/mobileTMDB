@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FilmDataMO+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/apx73/Desktop/EldarXcode/mobileTMDB/mobileTMDB/FilmDataMO+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:mobileTMDB.xcodeproj">
    </FileRef>
    <FileRef

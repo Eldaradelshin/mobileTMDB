@@ -10,4 +10,10 @@ import UIKit
 
 class FavFilmCell: UITableViewCell {
 
+    var filmId: Int = 0
+    
+    @IBOutlet weak var posterImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
 }

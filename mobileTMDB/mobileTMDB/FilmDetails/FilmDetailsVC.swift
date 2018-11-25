@@ -11,6 +11,7 @@ import UIKit
 class FilmDetailsVC: UIViewController {
     
     var selectedDetailedFilm = [Film]()
+    let savingService = SavingService()
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
@@ -19,7 +20,8 @@ class FilmDetailsVC: UIViewController {
     @IBOutlet weak var filmOverview: UITextView!
     
     @IBAction func saveAction(_ sender: Any) {
-        
+        print("Сохранить фильм \(self.selectedDetailedFilm[0].title)")
+        savingService.saveMovieData(filmToSave: selectedDetailedFilm[0])
     }
     
     override func viewDidLoad() {

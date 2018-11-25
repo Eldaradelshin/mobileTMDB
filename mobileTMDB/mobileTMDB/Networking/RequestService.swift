@@ -32,9 +32,8 @@ class RequestService {
                 let innerArray = recievedData!["results"] as! [[String: Any]]
                 var films = [Film]()
                 for filmDict in innerArray {
-                    if let film = Film(json: filmDict) {
+                    let film = Film(json: filmDict)
                     films.append(film)
-                }
              completion(films)
             }
         }
@@ -67,9 +66,8 @@ class RequestService {
                 
                 if innerArray.isEmpty != true {
                 for filmDict in innerArray {
-                    if let film = Film(json: filmDict) {
+                    let film = Film(json: filmDict)
                     films.append(film)
-                    }
                 }
             }
                 completion(films)
